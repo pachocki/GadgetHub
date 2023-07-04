@@ -1,8 +1,9 @@
 import { mongooseConnect } from "@/lib/mongoseConnect";
 import { Product } from "@/models/Product";
 import { Order } from "@/models/Order";
-const stripe = require("stripe")(process.env.STRIPE_SK);
 import cors from "cors";
+const stripe = require("stripe")(process.env.STRIPE_SK);
+
 
 const corsOptions = {
   origin: "https://gadgethub-nine.vercel.app",
