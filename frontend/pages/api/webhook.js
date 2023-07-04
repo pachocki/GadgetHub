@@ -1,14 +1,14 @@
-import { mongooseConnect } from "@/lib/mongoseConnect";
 const stripe = require("stripe")(process.env.STRIPE_SK);
 import { buffer } from "micro";
 import { Order } from "@/models/Order";
+import { mongooseConnect } from "@/lib/mongoseConnect";
 
 // The endpoint secret for verifying webhook events
 const endpointSecret =
   "whsec_634d3142fd2755bd61adaef74ce0504bd2044848c8aac301ffdb56339a0ca78d";
 
 export default async function handler(req, res) {
-    // Connect to MongoDB using mongoose
+  // Connect to MongoDB using mongoose
   await mongooseConnect();
   // Extract the signature from the request headers
   const sig = req.headers["stripe-signature"];
@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       endpointSecret
     );
   } catch (err) {
-     // Return an error response if the event verification fails
+    // Return an error response if the event verification fails
     res.status(400).send(`Webhook Error: ${err.message}`);
     return;
   }
@@ -31,7 +31,7 @@ export default async function handler(req, res) {
   // Handle the event based on its type
   switch (event.type) {
     case "checkout.session.completed":
-        // Retrieve relevant data from the event object
+      // Retrieve relevant data from the event object
       const data = event.data.object;
       const orderId = data.metadata.orderId;
       const paid = data.payment_status === "paid";
@@ -45,7 +45,7 @@ export default async function handler(req, res) {
     default:
       console.log(`Unhandled event type ${event.type}`);
   }
- // Return a success response
+  // Return a success response
   res.status(200).send("ok");
 }
 
