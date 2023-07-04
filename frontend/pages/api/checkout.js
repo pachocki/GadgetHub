@@ -8,8 +8,9 @@ const stripe = stripePackage(process.env.STRIPE_SK);
 
 const corsOptions = {
   origin: "https://gadgethub-nine.vercel.app",
-  methods: ["POST"],
-  allowedHeaders: ["Content-Type"],
+  methods: "POST",
+  allowedHeaders: "Content-Type",
+  optionsSuccessStatus: 200, 
 };
 
 const corsHandler = cors(corsOptions);
