@@ -2,8 +2,16 @@ import { mongooseConnect } from "@/lib/mongoseConnect";
 import { Product } from "@/models/Product";
 import { Order } from "@/models/Order";
 const stripe = require("stripe")(process.env.STRIPE_SK);
+const cors = require("cors");
+
+const corsOptions = {
+  origin: "https://gadgethub-nine.vercel.app",
+  methods: ["POST"],
+};
 
 export default async function handler(req, res) {
+  const corsHandler = cors(corsOptions);
+  await corsHandler(req, res);
   if (req.method !== "POST") {
     res.json("should be a POST request");
     return;
