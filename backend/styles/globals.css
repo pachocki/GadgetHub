@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+label{
+    @apply text-white/80  text-xl font-bold ;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .recharts-tooltip-cursor {
+    fill: #ffffff48!important; /* Replace "blue" with your desired color */
+  }
