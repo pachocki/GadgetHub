@@ -137,12 +137,14 @@ const MobileMenu = styled.div`
     position: fixed;
     background: #f9f9f9;
     height: 50vh;
+    z-index:999;
     font-size:2rem;
     top: 3rem;
     gap: 1rem;
     border-radius: 0 0 10px 10px;
     border-bottom: 1px solid #000;
     animation: ${fadeIn} 0.3s ease-in-out;
+
   }
 `;
 
