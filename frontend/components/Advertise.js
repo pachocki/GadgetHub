@@ -9,11 +9,17 @@ const Wrapper = styled.div`
 const ImageWrapper = styled.div`
   padding: 1rem 0;
   display: grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0.2rem;
   img {
     width: 100%;
     border-radius: 10px;
+  }
+  @media (max-width: 778px) {
+    grid-template-columns: 1fr;
+    img:nth-child(2) {
+      display: none;
+    }
   }
 `;
 const Advertise = () => {

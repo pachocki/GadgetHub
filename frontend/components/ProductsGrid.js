@@ -22,7 +22,7 @@ const StyledProductsGrid = styled.div`
         overflow-x: scroll;
         white-space: nowrap;
         display: flex;
-        padding-bottom: 10px;
+        padding: 10px 1px;
       }
     `}
 `;
