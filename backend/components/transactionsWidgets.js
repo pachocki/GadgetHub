@@ -23,7 +23,7 @@ const transactionsWidgets = ({ orders }) => {
   }, [orders]);
   return (
     <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 ">
-      <div className="bg-teal-900/20 rounded-xl h-[22vh] p-5 transition-all hover:bg-teal-900/40 xl:p-3 lg:p-1 lg:h-[15vh] sm:h-[12vh]">
+      <div className="bg-teal-900/20 rounded-xl h-[22vh] p-5 transition-all hover:bg-teal-900/40 xl:p-3 lg:p-1 lg:h-[15vh] sm:h-full">
         <div className="flex gap-2 items-center text-3xl xl:text-2xl lg:text-xl md:text-[1rem] sm:text-xl">
           <BiMoney />
           <span >Total Revenue</span>
@@ -33,7 +33,7 @@ const transactionsWidgets = ({ orders }) => {
         </div>
       </div>
 
-      <div className="bg-teal-900/20 rounded-xl h-[22vh] p-5 transition-all hover:bg-teal-900/40 xl:p-3  lg:p-1 lg:h-[15vh] sm:h-[12vh]">
+      <div className="bg-teal-900/20 rounded-xl h-[22vh] p-5 transition-all hover:bg-teal-900/40 xl:p-3  lg:p-1 lg:h-[15vh] sm:h-full">
         <div className="flex gap-2 items-center text-3xl xl:text-2xl lg:text-xl md:text-[1rem] sm:text-xl">
           <BiUser />
           <span>Total Users</span>
@@ -42,7 +42,7 @@ const transactionsWidgets = ({ orders }) => {
           {totalUsers}
         </div>
       </div>
-      <div className="bg-teal-900/20 rounded-xl h-[22vh] p-5 transition-all hover:bg-teal-900/40 xl:p-3 lg:p-1 lg:h-[15vh] sm:h-[12vh]">
+      <div className="bg-teal-900/20 rounded-xl h-[22vh] p-5 transition-all hover:bg-teal-900/40 xl:p-3 lg:p-1 lg:h-[15vh] sm:h-full">
         <div className="flex gap-2 items-center text-3xl xl:text-2xl lg:text-xl md:text-[1rem] sm:text-xl">
           <GiReceiveMoney />
           <span>Total Transaction</span>
