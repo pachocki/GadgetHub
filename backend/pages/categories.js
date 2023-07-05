@@ -88,7 +88,7 @@ const Categories = () => {
   return (
     <Layout>
       <h1 className="text-5xl font-bold lg:text-3xl pb-10">Categories</h1>
-      <div className="flex flex-col gap-5 h-full">
+      <div className="flex flex-col gap-5 h-full mb-24">
         <label className="pt-5 sm:text-lg ">
           {editedCategory
             ? `Edit Category ${editedCategory?.name}`
