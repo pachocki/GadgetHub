@@ -130,12 +130,14 @@ const MobileMenu = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 1rem;
     position: fixed;
     background: #f9f9f9;
-    height: 25vh;
+    height: 50vh;
+    font-size:2rem;
     top: 3rem;
     gap: 1rem;
     border-radius: 0 0 10px 10px;
